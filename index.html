@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-error"></p>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <button onclick="showAddStudent()">Add Student</button>
+        <button onclick="viewStudents()">View Students</button>
+        <button onclick="backupData()">Backup Data</button>
+        <button onclick="restoreData()">Restore Data</button>
+        <button onclick="logout()">Logout</button>
+
+        <div id="student-form" class="hidden">
+            <h3>Add Student</h3>
+            <input type="text" id="studentId" placeholder="Student ID">
+            <input type="text" id="studentName" placeholder="Student Name">
+            <input type="text" id="studentCourse" placeholder="Course">
+            <button onclick="addStudent()">Submit</button>
+        </div>
+
+        <div id="student-list" class="hidden">
+            <h3>Student List</h3>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="student-panel" class="hidden">
+        <h2>Student Dashboard</h2>
+        <button onclick="viewMyInfo()">View My Info</button>
+        <button onclick="logout()">Logout</button>
+        <div id="student-info" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
